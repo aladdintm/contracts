@@ -1,0 +1,11 @@
+artifacts
+mock_tokens
+/node_modules/
+.idea
+config.js
+migrations
+build
+.DS_Store
+test
+.deps
+yarn.lock
