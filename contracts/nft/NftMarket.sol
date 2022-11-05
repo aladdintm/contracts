@@ -123,7 +123,7 @@ contract NFTMarket is Context, IERC721Receiver, ReentrancyGuard, InitializableOw
         _;
     }
 
-    function seize(IERC20 asset) external returns (uint256 balance) {
+    function seize(IERC20 asset) external onlyOwner returns (uint256 balance) {
         balance = asset.balanceOf(address(this));
         asset.safeTransfer(owner(), balance);
     }
